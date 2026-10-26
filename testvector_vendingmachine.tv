@@ -1,0 +1,28 @@
+//N D Q Di Rn Rd Rtd
+// S0
+0011000 // S0  + Q -> S0 : dispense
+1000000 // S0  + N -> S5
+// S5
+0011100 // S5  + Q -> S0 : dispense, return nickel
+0100000 // S0  + D -> S10
+// S10
+0011010 // S10 + Q -> S0 : dispense, return dime
+1000000 // S0  + N -> S5
+1000000 // S5  + N -> S10
+1000000 // S10 + N -> S15
+// S15
+0011110 // S15 + Q -> S0 : dispense, return dime + nickel
+1000000 // S0  + N -> S5
+0100000 // S5  + D -> S15
+0101000 // S15 + D -> S0 : dispense
+0100000 // S0  + D -> S10
+0100000 // S10 + D -> S20
+// S20
+1001000 // S20 + N -> S0 : dispense
+0100000 // S0  + D -> S10
+1000000 // S10 + N -> S15
+1000000 // S15 + N -> S20
+0101100 // S20 + D -> S0 : dispense, return nickel
+0100000 // S0  + D -> S10
+0100000 // S10 + D -> S20
+0011001 // S20 + Q -> S0 : dispense, return two dimes
