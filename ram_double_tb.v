@@ -46,6 +46,6 @@ module ram_double_tb ();
 		if (i == numberOfTest-1) begin
 			$display ("Number of errors, %d", error);
 			$finish;
-		end else i=i+1;
+		end else if( !rst)  i=i+1;
 	end
 endmodule
